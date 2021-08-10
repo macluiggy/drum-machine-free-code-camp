@@ -2,14 +2,15 @@ import React from 'react';
 //import logo from './logo.svg';
 //import { Counter } from './features/counter/Counter';
 import './App.css';
-import Main from './components/Main'
+import Main from './components/Main';
+import { Provider } from 'react-redux';
+import store from './store.js'
 
 function App() {
   return (
-    <div className="App">
-      hola
+    <Provider store={store}>
       <Main />
-    </div>
+    </Provider>
   );
 }
 
