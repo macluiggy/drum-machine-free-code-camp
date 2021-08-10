@@ -6,7 +6,8 @@ const InputWithLabel = ({ type, id, name, children, swtchPwr, power }) => {
 			 type={type}
 			 id={id}
 			 name={name}
-			 onClick={swtchPwr} />
+			 onClick={swtchPwr}
+			 checked={power} />
 		</>
 		)
 }
