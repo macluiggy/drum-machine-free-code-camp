@@ -4,6 +4,7 @@ import InputWithLabel from './InputWithLabel'
 import DrumPad from './DrumPad';
 import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from '../mapToProps/'
+import '../sass/main.scss'
 
 const Main = ({ state, switchPower, switchBank, switchVolume, changeClipText }) => {
 	const { power, bank, volume } = state.switchStatus
