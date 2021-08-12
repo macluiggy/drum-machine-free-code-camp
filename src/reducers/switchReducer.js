@@ -3,6 +3,7 @@ const POWER = 'POWER';
 const initialState = {
 	power: true,
 	bank: false,
+	volume: 50,
 }
 
 const switchReducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ const switchReducer = (state = initialState, action) => {
 			return {
 				...state,
 				bank: action.on,
+			}
+		case 'CHANGE_VOLUME':
+			return {
+				...state,
+				volume: action.newVolume,
 			}
 		default:
 			return state;

@@ -5,10 +5,9 @@ import DrumPad from './DrumPad';
 import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from '../mapToProps/'
 
-const Main = ({ state, switchPower, switchBank, changeClipText }) => {
-	const { power, bank } = state.switchStatus
+const Main = ({ state, switchPower, switchBank, switchVolume, changeClipText }) => {
+	const { power, bank, volume } = state.switchStatus
 	const { clipText } = state.clipTextStatus
-
 	return (
 		<div id='drum-machine'>
 			<div className='drum_pad_container'>
@@ -17,7 +16,8 @@ const Main = ({ state, switchPower, switchBank, changeClipText }) => {
 						 power={power}
 						 key={items.keyCode}
 						 {...items}
-						 changeClipText={changeClipText} /> )}
+						 changeClipText={changeClipText}
+						 volume={volume} /> )}
 			</div>
 			<div id='display'>
 				<InputWithLabel
@@ -25,9 +25,13 @@ const Main = ({ state, switchPower, switchBank, changeClipText }) => {
 				 name='power'
 				 type='checkbox'
 				 fn={(e) => switchPower(e.target.checked)}
-				 power={power} >Power</InputWithLabel>
+				 toggle={power} >Power</InputWithLabel>
 				 <span>{clipText}</span>
-
+				 <input type="range" onChange={(e) => {
+				 	console.log(e.target.value)
+				 	changeClipText(`volume: ${Math.floor(e.target.value)}`)
+				 	switchVolume(e.target.value)
+				 }}/>
 				 <InputWithLabel
 				 id='power'
 				 name='power'
