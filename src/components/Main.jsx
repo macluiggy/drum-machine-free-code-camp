@@ -5,14 +5,19 @@ import DrumPad from './DrumPad';
 import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from '../mapToProps/'
 
-const Main = ({ state, switchPower }) => {
-	const { power, /*clipText*/ } = state.switchStatus
+const Main = ({ state, switchPower, changeClipText }) => {
+	const { power } = state.switchStatus
+	const { clipText } = state.clipTextStatus
 
 	return (
 		<div id='drum-machine'>
 			<div className='drum_pad_container'>
 				{(false ? bankOne : bankTwo ).map(items =>
-						<DrumPad power={power} key={items.keyCode} {...items}/> )}
+						<DrumPad
+						 power={power}
+						 key={items.keyCode}
+						 {...items}
+						 changeClipText={changeClipText} /> )}
 			</div>
 			<div id='display'>
 				<InputWithLabel
@@ -24,6 +29,7 @@ const Main = ({ state, switchPower }) => {
 				 	console.log(power)
 				 }}
 				 power={power} >Power</InputWithLabel>
+				 <span>{clipText}</span>
 
 			</div>
 		</div>

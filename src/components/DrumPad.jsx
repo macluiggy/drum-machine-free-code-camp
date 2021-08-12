@@ -1,8 +1,9 @@
-const DrumPad = ({ keyTrigger, id, keyCode, url, power }) => {
+const DrumPad = ({ keyTrigger, id, keyCode, url, power, changeClipText }) => {
 	let sound = new Audio(url);
-	const fn = () => {
+	const fn = e => {
 	    if(power) {
 	    	sound.play();
+	    	console.log()
 	    }
 	    return
 	}

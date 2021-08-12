@@ -2,7 +2,6 @@ const POWER = 'POWER';
 
 const initialState = {
 	power: true,
-	clipText: '',
 }
 
 const switchReducer = (state = initialState, action) => {
