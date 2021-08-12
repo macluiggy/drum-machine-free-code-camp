@@ -1,4 +1,4 @@
-const InputWithLabel = ({ type, id, name, children, swtchPwr, power }) => {
+const InputWithLabel = ({ type, id, name, children, fn, toggle }) => {
 	return (
 		<>
 			<label htmlFor={id}>{children}</label>
@@ -6,8 +6,8 @@ const InputWithLabel = ({ type, id, name, children, swtchPwr, power }) => {
 			 type={type}
 			 id={id}
 			 name={name}
-			 onClick={swtchPwr}
-			 checked={power} />
+			 onClick={fn}
+			 defaultChecked={toggle} />
 		</>
 		)
 }

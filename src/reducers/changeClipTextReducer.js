@@ -1,5 +1,5 @@
 const initialState = {
-	clipText: 'hello',
+	clipText: '',
 }
 
 const changeClipTextReducer = (state=initialState, action) => {
@@ -7,7 +7,7 @@ const changeClipTextReducer = (state=initialState, action) => {
 		case 'CHANGE_CLIP_TEXT':
 			return {
 				...state,
-				text: action.text,
+				clipText: action.text,
 			}
 		default:
 			return state;

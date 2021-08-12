@@ -3,7 +3,9 @@ const DrumPad = ({ keyTrigger, id, keyCode, url, power, changeClipText }) => {
 	const fn = e => {
 	    if(power) {
 	    	sound.play();
-	    	console.log()
+	    	sound.currentTime = 0;
+	    	//console.log(id)
+	    	changeClipText(id)
 	    }
 	    return
 	}
