@@ -1,3 +1,4 @@
+import React from 'react';
 const InputWithLabel = ({ type, id, name, children, fn, toggle }) => {
 	return (
 		<>

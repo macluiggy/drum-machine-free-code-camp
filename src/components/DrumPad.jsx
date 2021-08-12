@@ -1,3 +1,4 @@
+import React from 'react';
 const DrumPad = ({ keyTrigger, id, keyCode, url, power, changeClipText, volume }) => {
 	let sound = new Audio(url);
 	const fn = e => {
