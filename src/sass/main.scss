@@ -1,7 +1,7 @@
 @import 'mixins';
 
 #drum-machine {
-	@include border(red);
+	//@include border(red);
 	border-radius: 0.5em;
 	text-align: center;
 	display: flex;
@@ -32,6 +32,11 @@
 				padding: 1em 1.5em;
 				@include box-shadow(3px, 3px, 4px, black);
 				background-color: gray;
+				cursor: pointer;
+				border-radius: 0.5em;
+			}
+			button:active {
+				background-color: tan;
 			}
 		}
 	}
@@ -60,11 +65,11 @@
 				@include border(gray);
 				width: 3em;
 				margin: auto;
-				height: 3vh;
+				height: 1.1em;
 				bottom: 0px;
 				transform: translateY(-17px);
-				left: 50%;
 				background-color: gray;
+				position: relative;
 			}
 			.slider:before {
 				position: absolute;
@@ -81,7 +86,7 @@
 			}
 		}
 		.clip_description {
-			@include border(blue);
+			//@include border(blue);
 			height: 7vh;
 			display: flex;
 			align-items: center;
