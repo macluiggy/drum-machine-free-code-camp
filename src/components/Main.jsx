@@ -29,7 +29,7 @@ const Main = ({ state, switchPower, switchBank, switchVolume, changeClipText }) 
 				 toggle={power} >Power</InputWithLabel>
 				 <span>{clipText}</span>
 				 <input type="range" onChange={(e) => {
-				 	console.log(e.target.value)
+				 	//console.log(e.target.value)
 				 	changeClipText(`volume: ${Math.floor(e.target.value)}`)
 				 	switchVolume(e.target.value)
 				 }}/>

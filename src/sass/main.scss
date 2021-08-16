@@ -2,4 +2,16 @@
 
 #drum-machine {
 	@include border(red);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.drum_pad_container {
+		
+	}
+	#display {
+		@include border(blue);
+		display: flex;
+		flex-direction: column;
+	}
 }

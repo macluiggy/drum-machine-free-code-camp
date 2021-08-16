@@ -16,7 +16,12 @@ const DrumPad = ({ keyTrigger, id, keyCode, url, power, changeClipText, volume }
 	return (
 		<div>
 			
-				<button className='drum-pad' id={id} key={keyCode} onClick={fn}>
+				<button
+				 disabled={!power}
+				 className='drum-pad'
+				 id={id}
+				 key={keyCode}
+				 onClick={fn} >
 					{keyTrigger}
 					<audio
 					 volume='0.0'
