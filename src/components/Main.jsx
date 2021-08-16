@@ -27,7 +27,7 @@ const Main = ({ state, switchPower, switchBank, switchVolume, changeClipText }) 
 				 type='checkbox'
 				 fn={(e) => switchPower(e.target.checked)}
 				 toggle={power} >Power</InputWithLabel>
-				 <span>{clipText}</span>
+				 <span className='clip_description'>{clipText}</span>
 				 <input type="range" onChange={(e) => {
 				 	//console.log(e.target.value)
 				 	changeClipText(`volume: ${Math.floor(e.target.value)}`)

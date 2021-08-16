@@ -2,14 +2,25 @@
 
 #drum-machine {
 	@include border(red);
+	border-radius: 0.5em;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	@media screen and (min-width:  400px) {
 		flex-direction: row;
+		width: 25em;
+		.drum_pad_container {
+			margin-right: 1em;
+			margin-bottom: 0em !important;
+
+		}
 	}
 	justify-content: center;
 	align-items: center;
+	background-color: rgba(162, 49, 143, 1);
+	padding: 1em;
+	width: 80%;
+	margin: auto;
 	.drum_pad_container {
 		display: grid;
 		grid-gap: 0.3em;
@@ -20,12 +31,41 @@
 			button {
 				padding: 1em 1.5em;
 				@include box-shadow(3px, 3px, 4px, black);
+				background-color: gray;
 			}
 		}
 	}
 	#display {
-		@include border(blue);
+		//@include border(blue);
 		display: flex;
 		flex-direction: column;
+		form {
+			@include border(black);
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			input {
+				@include border(red);
+			}
+			.slider {
+				@include border(red);
+				width: 2em;
+				margin: auto;
+				height: 2vh;
+				position: absolute;
+				bottom: 0px;
+				left: 50%;
+			}
+			input:checked {
+			}
+		}
+		.clip_description {
+			@include border(blue);
+			height: 7vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: gray;
+		}
 	}
 }
