@@ -6,10 +6,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(117, 35, 104, 1);
-  transform: translateY(20%);
-  -ms-transform: translateY(30%);
+  transform: translateY(10%);
+  -ms-transform: translateY(20%);
 }
-
+@media screen and (min-width: 400px) {
+  body {
+    transform: translateY(30%);
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
