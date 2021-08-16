@@ -4,10 +4,24 @@
 	@include border(red);
 	text-align: center;
 	display: flex;
+	flex-direction: column;
+	@media screen and (min-width:  400px) {
+		flex-direction: row;
+	}
 	justify-content: center;
 	align-items: center;
 	.drum_pad_container {
-		
+		display: grid;
+		grid-gap: 0.3em;
+		grid-template-columns: repeat(3, 1fr);
+		margin-bottom: 2em;
+		.drum_pad {
+			//@include border(black);
+			button {
+				padding: 1em 1.5em;
+				@include box-shadow(3px, 3px, 4px, black);
+			}
+		}
 	}
 	#display {
 		@include border(blue);

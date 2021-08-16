@@ -14,8 +14,7 @@ const DrumPad = ({ keyTrigger, id, keyCode, url, power, changeClipText, volume }
 	    return
 	}
 	return (
-		<div>
-			
+		<div className='drum_pad'>
 				<button
 				 disabled={!power}
 				 className='drum-pad'
