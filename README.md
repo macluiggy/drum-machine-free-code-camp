@@ -1,6 +1,6 @@
 # Drum Machine
 
-See the project live: https://markdown-previewer-free-code-camp.netlify.app/
+See the project live: https://drum-machine-free-code-camp.netlify.app/
 
 The App functionality is based on `user stories` from **freeCodeCamp**, you can check them out here: [Build a Drum Machine](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-drum-machine)
 
