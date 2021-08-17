@@ -14,3 +14,5 @@ export const mapDispatchToProps = dispatch => {
 		switchVolume: newVolume => dispatch({ type: 'CHANGE_VOLUME', newVolume: newVolume, })
 	}
 }
+
+//comment added
